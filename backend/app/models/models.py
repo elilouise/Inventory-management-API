@@ -21,7 +21,7 @@ class User(Base):
 
     id = Column(Integer, primary_key=True, index=True)                       # Unique identifier for the user
     email = Column(String, unique=True, index=True, nullable=False)          # User's email for login and communication
-    full_name = Column(String, index=True, nullable=False)       # User's display name for identification
+    full_name = Column(String, index=True, nullable=False)                   # User's display name for identification
     hashed_password = Column(String, nullable=False)                         # Securely stored password (never store plaintext)
     is_active = Column(Boolean, default=True)                                # Flag to indicate if user account is active or disabled
     is_admin = Column(Boolean, default=False)                                # Flag to grant administrative privileges

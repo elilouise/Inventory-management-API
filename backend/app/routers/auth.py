@@ -15,6 +15,8 @@ from app.core.utils import (
 from app.models.models import User 
 from app.schemas.auth import UserCreate, Token, User as UserSchema, TokenPayload
 
+from app.schemas.auth import TokenRefresh
+
 router = APIRouter(prefix="/auth", tags=["authentication"])
 
 
@@ -106,7 +108,7 @@ def login(
 
 
 @router.post("/refresh", response_model=Token)
-def refresh_token(token: str, db: Session = Depends(get_db)):
+def refresh_token(token_data: TokenRefresh, db: Session = Depends(get_db)):
     """
     Get a new access token using a refresh token.
     
@@ -120,11 +122,15 @@ def refresh_token(token: str, db: Session = Depends(get_db)):
     Raises:
         HTTPException: If refresh token is invalid or expired
     """
+    
     credentials_exception = HTTPException(
         status_code=status.HTTP_401_UNAUTHORIZED,
         detail="Could not validate credentials",
         headers={"WWW-Authenticate": "Bearer"},
     )
+
+    # Get the token from the request body
+    token = token_data.refresh_token
     
     try:
         # Decode the refresh token

@@ -1,27 +1,29 @@
 # Core dependencies
-fastapi==0.115.8
-python-jose==3.3.0
-SQLAlchemy==2.0.38
-passlib==1.7.4
-pydantic[email]==2.10.6
-python-dotenv==1.0.1
-uvicorn==0.29.0
+fastapi==0.115.8              # Web framework to build APIs quickly and easily
+python-jose==3.3.0            # Handles JWT tokens for authentication and security
+SQLAlchemy==2.0.38            # Database toolkit to work with databases in Python
+passlib==1.7.4                # Password hashing and verification library
+pydantic[email]==2.10.6       # Data validation and settings management
+python-dotenv==1.0.1          # Loads environment variables from .env files
+uvicorn==0.29.0               # ASGI server that runs your FastAPI application
+bcrypt==4.3.0
 
 
 # Async/IO dependencies
-anyio==4.8.0
-click==8.1.8
-h11==0.14.0
-httpx==0.28.1
-cryptography==44.0.2
-psycopg2-binary==2.9.9
-python-multipart==0.0.16
-email-validator==2.1.1
-aiohttp[speedups]==3.11.13 
-asyncpg==0.30.0
-aiofiles==23.2.1
-redis>=4.5.4
-rq>=1.15.0
-rq-dashboard>=0.6.1
-celery>=5.2.7
-pytest>=7.3.1
+anyio==4.8.0                  # Compatibility layer for async code
+click==8.1.8                  # Command line interface creation toolkit
+h11==0.14.0                   # HTTP/1.1 protocol implementation
+httpx==0.28.1                 # Modern HTTP client for testing FastAPI apps
+cryptography==44.0.2          # Provides cryptographic recipes and primitives
+psycopg2-binary==2.9.9        # PostgreSQL database adapter
+python-multipart==0.0.16      # Handles file uploads and form data
+email-validator==2.1.1        # Validates email addresses
+aiohttp[speedups]==3.11.13    # Async HTTP client/server for making requests
+asyncpg==0.30.0               # Fast PostgreSQL client for async code
+aiofiles==23.2.1              # Handles files asynchronously
+redis>=4.5.4                  # Client for working with Redis database
+rq>=1.15.0                    # Simple job queue backed by Redis
+rq-dashboard>=0.6.1           # Web front-end monitor for RQ
+celery>=5.2.7                 # Distributed task queue for processing work
+pytest>=7.3.1                 # Framework for writing tests
+pytest-cov>=2.12.1            # Measures code coverage of Python tests

@@ -1,5 +1,6 @@
-from pydantic import BaseSettings, PostgresDsn
 from typing import Optional
+from pydantic import PostgresDsn
+from pydantic_settings import BaseSettings
 
 
 class Settings(BaseSettings):
@@ -8,7 +9,8 @@ class Settings(BaseSettings):
     API_V1_STR: str = "/api/v1"
     
     # Database
-    DATABASE_URL: PostgresDsn = "postgresql://postgres:postgres@localhost:5432/finesse_inventory"
+    DATABASE_URL: str = "postgresql://postgres:postgres@localhost:5432/finesse_inventory"
+
     
     # Security
     SECRET_KEY: str = "eli_secret_key"  # Should be overridden in production

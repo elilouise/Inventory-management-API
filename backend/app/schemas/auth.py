@@ -40,6 +40,9 @@ class Token(BaseModel):
     refresh_token: str  # Token to obtain new access tokens when expired
     token_type: str = "bearer"  # Token type (always "bearer")
 
+class TokenRefresh(BaseModel):
+    """Model for token refresh requests"""
+    refresh_token: str  
 
 class TokenPayload(BaseModel):
     """Model for JWT token payload data"""
