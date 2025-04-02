@@ -13,7 +13,7 @@ from app.worker import order_tasks
 
 
 
-# Add this patch decorator to affected tests
+# Added patch decorator 
 @patch('app.core.queue.redis_conn')
 @patch('app.core.cache.redis_client')
 def test_create_order_success(mock_cache_redis, mock_queue_redis, client, test_user, test_product, db_session, monkeypatch):
@@ -378,7 +378,7 @@ def test_process_order_background(test_user, test_product, db_session, monkeypat
     # Call the process_order function directly
     process_order(order_id)
     
-    # Query the order again instead of refreshing
+    # Query the order again 
     updated_order = db_session.query(Order).filter(Order.id == order_id).first()
     assert updated_order.status == OrderStatus.PROCESSING
     
@@ -442,9 +442,6 @@ def test_process_order_payment_failure(test_user, test_product, db_session, monk
     db_session.add(order_item)
     db_session.commit()
     
-    # Import the module
-    from app.worker import order_tasks
-    
     # Mock database session
     monkeypatch.setattr("app.worker.order_tasks.get_db_session", lambda: db_session)
     
@@ -469,7 +466,6 @@ def test_process_order_payment_failure(test_user, test_product, db_session, monk
 
 def test_reserve_inventory_race_condition(test_product, db_session):
     """Test that inventory reservation handles concurrent updates correctly"""
-    # This test is more complex and might require additional mocking
     # Get initial inventory state
     inventory = db_session.query(Inventory).filter(Inventory.product_id == test_product.id).first()
     initial_stock = inventory.quantity_in_stock
@@ -525,7 +521,7 @@ def create_test_order(db_session, user, product, quantity=1):
     )
     db_session.add(order_item)
     
-    # Reserve inventory (optional - simulates what your endpoint does)
+    # Reserve inventory 
     inventory = db_session.query(Inventory).filter(Inventory.product_id == product.id).first()
     if inventory:
         inventory.quantity_reserved += quantity
