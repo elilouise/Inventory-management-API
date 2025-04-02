@@ -27,7 +27,7 @@ class InventoryUpdate(BaseModel):
 
 class InventoryStockUpdate(BaseModel):
     """Model for updating only the stock quantity"""
-    quantity: int = Field(..., gt=0)  # Quantity to add (positive) or remove (negative)
+    quantity: int = Field(...)  # Quantity to add (positive) or remove (negative)
     reason: Optional[str] = None      # Reason for the stock adjustment
 
 
