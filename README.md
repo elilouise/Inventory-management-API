@@ -2,7 +2,7 @@
 
 This is a robust, scalable RESTful API-based inventory management and order processing system built with FastAPI, Redis, and PostgreSQL. This project implements a complete backend solution for e-commerce operations, focusing on performance, scalability, and data integrity.
 
-## 🌟 Overview
+## Overview
 
 FINESSE is a modern inventory management solution designed with Gen-Z e-commerce platforms in mind. It provides a comprehensive set of features for managing products, inventory, and orders with a focus on performance and reliability.
 
