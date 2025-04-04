@@ -63,13 +63,13 @@ The system is built around five core models:
 
 ## 🛠️ Technology Stack
 
-- **FastAPI**: Modern, high-performance web framework
-- **PostgreSQL**: Relational database for persistent storage
-- **SQLAlchemy**: ORM for database interactions
-- **Redis**: In-memory data store for caching and job queues
-- **RQ (Redis Queue)**: Background job processing
-- **Pydantic**: Data validation and settings management
-- **JWT**: Token-based authentication
+- **FastAPI**
+- **PostgreSQL**
+- **SQLAlchemy** (ORM for database interactions)
+- **Redis** (In-memory data store for caching and job queues)
+- **RQ (Redis Queue)** (Background job processing)
+- **Pydantic** (Data validation and settings management)
+
 
 ## 🔧 Installation & Setup
 
