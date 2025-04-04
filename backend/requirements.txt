@@ -6,7 +6,7 @@ passlib==1.7.4                # Password hashing and verification library
 pydantic[email]==2.10.6       # Data validation and settings management
 python-dotenv==1.0.1          # Loads environment variables from .env files
 uvicorn==0.29.0               # ASGI server that runs your FastAPI application
-bcrypt==4.3.0
+bcrypt==4.3.0                 # Password hashing library for secure storage
 
 
 # Async/IO dependencies
