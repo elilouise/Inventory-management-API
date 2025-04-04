@@ -81,7 +81,7 @@ The system is built around five core models:
 ### Setup Steps
 ```
 # Clone the repository
-git clone https://github.com/yourusername/finesse-inventory.git
+git clone https://github.com/elilouise/finesse-inventory.git
 cd finesse-inventory
 
 # Set up virtual environment
