@@ -1,6 +1,7 @@
 # Inventory Management System
 
-This is a robust, scalable RESTful API-based inventory management and order processing system built with FastAPI, Redis, and PostgreSQL. This project implements a complete backend solution for e-commerce operations, focusing on performance, scalability, and data integrity.
+This is a robust, scalable RESTful API-based inventory management and order processing system built with FastAPI, Redis, and PostgreSQL. 
+
 
 ## Overview
 
