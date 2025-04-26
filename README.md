@@ -5,7 +5,7 @@ This is a robust, scalable RESTful API-based inventory management and order proc
 
 ## Overview
 
-This project is a modern inventory management solution designed with Gen-Z e-commerce platforms in mind. It provides a comprehensive set of features for managing products, inventory, and orders with a focus on performance and reliability.
+This project is a inventory management solution designed with e-commerce platforms in mind. It provides a comprehensive set of features for managing products, inventory, and orders with a focus on performance and reliability.
 
 Key capabilities include:
 - **Real-time inventory tracking** with reserved vs. available distinction
@@ -94,7 +94,6 @@ pip install -r requirements.txt
 
 # Set up environment variables
 cp .env.example .env
-# Edit .env with your configuration
 
 # Run database migrations
 alembic upgrade head
