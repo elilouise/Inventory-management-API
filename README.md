@@ -67,7 +67,7 @@ The system is built around five core models:
 - **FastAPI**
 - **PostgreSQL**
 - **SQLAlchemy** (ORM for database interactions)
-- **Redis** (In-memory data store for caching and job queues)
+- **Redis** (In-memory data store for caching)
 - **RQ (Redis Queue)** (Background job processing)
 - **Pydantic** (Data validation and settings management)
 
@@ -114,28 +114,6 @@ Key endpoints include:
 - `/api/inventory/`: Manage inventory records
 - `/api/orders/`: Process and manage orders
 
-## 🌐 Scalability Considerations
-
-The system is designed with scaling in mind:
-- **Stateless Authentication**: JWT-based auth for horizontal scaling
-- **Background Processing**: Offloading heavy tasks to worker processes
-- **Caching Strategy**: Reducing database load for read-heavy operations
-- **Clean Architecture**: Separation of concerns for maintainability
-
-## 📊 Performance Optimizations
-
-Several strategies are implemented to maximize performance:
-- **Prioritized Job Queues**: Critical operations take precedence
-- **Selective Caching**: Frequently accessed data is cached with appropriate TTLs
-- **Efficient Database Queries**: Optimized queries with proper indexing
-- **Asynchronous Processing**: Non-blocking operations for improved throughput
-
-## 🔒 Security Features
-
-- **JWT Authentication**: Secure, token-based authentication
-- **Role-Based Access**: Admin vs regular user permissions
-- **Data Validation**: Input validation on all endpoints
-- **Proper Error Handling**: Secure error responses
 
 ## ✅ Testing
 
